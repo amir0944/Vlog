@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vlog</title>
+    <style>
+      #scroll {
+        background-color: #ff0066;
+        height: 2px;
+        box-shadow: 0px 2px 4px white;
+        position: fixed;
+        top: 0;
+        z-index: 1030;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scroll"></div>
+    <div id="root"></div>
+    <!-- <script src="./script.js" defer></script> -->
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      const scrollElem = document.querySelector("#scroll");
+      window.addEventListener("scroll", function () {
+        let scrollTop = window.scrollY;
+        let documentHeight = document.body.clientHeight;
+        let windowHeight = window.innerHeight;
+        let scrollValue = Math.floor(
+          (scrollTop / (documentHeight - windowHeight)) * 100
+        );
+
+        scrollElem.style.width = scrollValue + "%";
+      });
+    </script>
+  </body>
+</html>

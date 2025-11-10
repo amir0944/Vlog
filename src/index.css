@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+.btn {
+  @apply bg-[#ff0066] text-white py-3 px-6 rounded-lg hover:bg-white hover:text-[#ff0066] transition duration-300 cursor-pointer;
+}
+
+.hr {
+  @apply border-t border-[#ff0066] w-16 mx-auto;
+}
+
+.backImage {
+  background: linear-gradient(rgba(255, 251, 0, 0.176), rgba(255, 251, 0, 0)),
+    url("../public/images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.backImage2 {
+  background: linear-gradient(rgba(255, 251, 0, 0.32), rgba(255, 251, 0, 0.148)),
+    url("../public/images/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.divItemChart {
+  @apply flex flex-col items-center justify-center text-center text-white p-4;
+}
+
+.divTitle {
+  @apply text-5xl font-bold text-[#ff0066];
+}
+
+.pSerLogo:hover .serLogo {
+  @apply bg-white text-[#ff0066] transition duration-300;
+}
+.serLogo {
+  @apply bg-[#ff0066] text-white w-20 h-20 rounded-full flex items-center justify-center cursor-pointer  transition duration-700;
+}
+
+/* اضافه کردن کلاس active */
+#menu.active {
+  height: auto;
+  overflow: visible;
+  height: 500px;
+}
+
+#ulMenu.active {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #1e293b;
+  padding: 1rem;
+  border-top: 1px solid #475569;
+}
