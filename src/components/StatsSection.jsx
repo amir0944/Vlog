@@ -51,7 +51,7 @@ const StatsSection = () => {
         <div key={index} className="divItemChart">
           <div>
             <h1 className="divTitle">{counts[index]}</h1>
-            <p>{stat.label}</p>
+            <p className="text-[#ff0066] text-xl">{stat.label}</p>
           </div>
         </div>
       ))}

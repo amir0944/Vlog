@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="backImage w-full h-[800px] flex flex-col gap-4 justify-center items-center text-white">
+    <div className="backImage w-full h-[300px] md:h-[800px] flex flex-col gap-4 justify-center items-center text-white">
       <h1
         data-aos="fade-right"
         data-aos-duration="700"
