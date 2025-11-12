@@ -85,7 +85,10 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div className="w-full my-2.5 mt-40 lg:mt-0 flex flex-col gap-8 px-2.5">
+    <div
+      id="servicesSection"
+      className="w-full my-2.5 mt-40 lg:mt-0 flex flex-col gap-8 px-2.5"
+    >
       <div className="flex flex-col gap-8 text-white mb-8">
         <hr className="hr" />
         <h1 className="font-bold text-4xl">Services</h1>

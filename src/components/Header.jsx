@@ -1,73 +1,129 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const menu = document.querySelector("#menu");
-    const menuBtn = document.querySelector("#menuBtn");
-
-    const handleClick = () => {
-      menu.classList.toggle("active");
-      setMenuOpen((prev) => !prev); // همراه با React state
-    };
-
-    if (menuBtn) {
-      menuBtn.addEventListener("click", handleClick);
-    }
-
-    // حذف event listener وقتی کامپوننت unmount می‌شه
-    return () => {
-      if (menuBtn) {
-        menuBtn.removeEventListener("click", handleClick);
-      }
-    };
-  }, []);
-
   return (
-    <nav
-      id="menu"
-      className="w-full px-10 py-4 h-[80px] bg-slate-800 text-white flex flex-col md:flex-row gap-4 items-center md:items-center md:justify-start overflow-hidden duration-300"
-    >
-      <img
-        src="/images/images.jpg"
-        className="w-14 rounded-[50%] hidden md:flex"
-        alt=""
-      />
-
-      <div className="w-full flex md:hidden flex-row gap-2 justify-between items-center">
-        <img src="/images/images.jpg" className="w-14 rounded-[50%]" alt="" />
-        <button id="menuBtn" className="md:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            strokeWidth="2"
-            stroke="currentColor"
-            className="w-9 h-9"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+    <>
+      <header
+        id="header"
+        className="fixed top-0 w-full flex justify-between items-center px-6 py-4 bg-slate-800 text-white backdrop-blur-sm z-50"
+      >
+        {/* Hamburger Button */}
+        <button
+          className="text-3xl cursor-pointer z-50"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
         </button>
-      </div>
-      <ul
-        id="ulMenu"
-        className={`hidden md:flex gap-6 items-center justify-center ${
-          menuOpen ? "active" : ""
+
+        {/* Profile Image */}
+        <img src="/images/images.jpg" alt="" className="w-14 rounded-full" />
+      </header>
+
+      {/* Overlay */}
+      <div
+        style={{ zIndex: 2 }}
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-400 ${
+          menuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setMenuOpen(false)}
+      ></div>
+
+      {/* Menu */}
+      <nav
+        className={`fixed top-0 right-0 h-full w-64 bg-slate-800 text-white z-50 transform transition-transform duration-[400ms] ease-in-out flex flex-col ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <a style={{ color: "#ff0066" }} href="#">
-          Home
-        </a>
-        <li className="cursor-pointer">About Us</li>
-        <li className="cursor-pointer">Contact Us</li>
-        <li className="cursor-pointer">Services</li>
-        <li className="cursor-pointer">Portfolio</li>
-      </ul>
-    </nav>
+        {/* Close Button */}
+        <div className="flex justify-end p-4">
+          <button
+            className="text-2xl cursor-pointer"
+            onClick={() => setMenuOpen(false)}
+          >
+            X
+          </button>
+        </div>
+
+        {/* Menu Links */}
+        <ul className="flex flex-col gap-6 p-6">
+          <li>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("heroSection")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setMenuOpen(false);
+              }}
+              className="text-[#ff0066]"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#heroSection"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("heroSection")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setMenuOpen(false);
+              }}
+            >
+              About Me
+            </a>
+          </li>
+          <li>
+            <a
+              href="#aboutSection"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("aboutSection")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setMenuOpen(false);
+              }}
+            >
+              Contact Me
+            </a>
+          </li>
+          <li>
+            <a
+              href="#servicesSection"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("servicesSection")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setMenuOpen(false);
+              }}
+            >
+              Services
+            </a>
+          </li>
+          <li>
+            <a
+              href="#statsSection"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("header")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setMenuOpen(false);
+              }}
+            >
+              Portfolio
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 };
 

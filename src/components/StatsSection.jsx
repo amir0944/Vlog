@@ -44,8 +44,9 @@ const StatsSection = () => {
 
   return (
     <div
+      id="statsSection"
       ref={ref}
-      className="backImage2 py-5 grid justify-center grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4 lg:gap-0"
+      className="backImage2 px-2 py-5 grid justify-center grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-4 lg:gap-0"
     >
       {stats.map((stat, index) => (
         <div key={index} className="divItemChart">
