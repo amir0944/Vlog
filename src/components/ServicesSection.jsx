@@ -90,7 +90,7 @@ const ServicesSection = () => {
       className="w-full my-2.5 mt-40 lg:mt-0 flex flex-col gap-8 px-2.5"
     >
       <div className="flex flex-col gap-8 text-white mb-8">
-        <hr className="hr" />
+        <hr className="hr my-4" />
         <h1 className="font-bold text-4xl">Services</h1>
         {/* <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting

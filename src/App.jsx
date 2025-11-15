@@ -6,6 +6,7 @@ import ServicesSection from "./components/ServicesSection";
 import StatsSection from "./components/StatsSection";
 import ScrollButton from "./components/ScrollButton";
 import "./index.css";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <AboutSection />
       <ServicesSection />
       <StatsSection />
+      <Footer />
     </div>
   );
 };
