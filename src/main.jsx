@@ -1,11 +1,23 @@
+// src/main.jsx یا src/index.js
 import React from "react";
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
+import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
+import "./index.css";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
+// اضافه کن این دو خط
+import AOS from "aos";
+import "aos/dist/aos.css"; // استایل‌های AOS
+
+// این رو بعد از رندر اضافه کن
+AOS.init({
+  duration: 800, // مدت انیمیشن
+  easing: "ease", // نوع حرکت
+  once: true, // فقط یکبار انیمیشن بزنه
+  offset: 100, // کمی زودتر شروع بشه
+});
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
     <App />
-  </StrictMode>
+  </React.StrictMode>
 );

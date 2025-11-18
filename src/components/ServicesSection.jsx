@@ -3,7 +3,7 @@ import React from "react";
 const ServicesSection = () => {
   const services = [
     {
-      title: "Logo Design",
+      title: "Frontend Development",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -20,10 +20,10 @@ const ServicesSection = () => {
           />
         </svg>
       ),
-      desc: "Creating timeless and professional logos that clearly express your brand identity. Every mark is crafted to reflect your values, personality, and long-term vision.",
+      desc: "Building fast, responsive and modern web apps with React, Next.js, TypeScript and Tailwind CSS.",
     },
     {
-      title: "App Design",
+      title: "UI/UX Implementation",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -40,10 +40,10 @@ const ServicesSection = () => {
           />
         </svg>
       ),
-      desc: "Designing intuitive and visually refined mobile app interfaces focused on clarity, performance, and user satisfaction — from wireframes to final prototypes.",
+      desc: "Pixel-perfect, accessible and user-friendly interfaces with modern design systems.",
     },
     {
-      title: "UI Strategy",
+      title: "Performance & SEO",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -60,10 +60,10 @@ const ServicesSection = () => {
           />
         </svg>
       ),
-      desc: "Developing data-driven UI strategies that enhance user experience and increase conversion rates. Every design decision is guided by real user insights and business objectives.",
+      desc: "Lighthouse 95+, Core Web Vitals optimized, blazing-fast load times.",
     },
     {
-      title: "Web Development",
+      title: "Portfolio & Landing Pages",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ const ServicesSection = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-14"
+          className="size-14 text-white"
         >
           <path
             strokeLinecap="round"
@@ -80,7 +80,7 @@ const ServicesSection = () => {
           />
         </svg>
       ),
-      desc: "Building fast, responsive, and secure websites using modern technologies. Focused on seamless performance, scalability, and a smooth experience across all devices.",
+      desc: "Professional personal websites that help developers and freelancers get hired.",
     },
   ];
 
@@ -92,20 +92,26 @@ const ServicesSection = () => {
       <div className="flex flex-col gap-8 text-white mb-8">
         <hr className="hr my-4" />
         <h1 className="font-bold text-4xl">Services</h1>
-        {/* <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry...
-        </p> */}
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
         {services.map((service, index) => (
           <div
             key={index}
-            className="pSerLogo bg-white text-black rounded-xl px-6 flex flex-col gap-4"
+            data-aos="fade-up"
+            data-aos-delay={(index + 1) * 100}
+            data-aos-duration="800"
+            className="pSerLogo bg-white text-black rounded-xl px-6 flex flex-col gap-4 shadow-2xl hover:shadow-pink-500/50 transition-all duration-500"
           >
-            <button className="serLogo mt-[-50px]">{service.icon}</button>
-            <h1 className="text-4xl">{service.title}</h1>
-            <p className="pb-2.5">{service.desc}</p>
+            <div className="serLogo mt-[-50px] flex justify-center">
+              <div className="bg-pink-600 p-4 rounded-full shadow-lg duration-300">
+                {service.icon}
+              </div>
+            </div>
+            <h1 className="text-3xl font-bold text-pink-600">
+              {service.title}
+            </h1>
+            <p className="pb-4 text-gray-700 leading-relaxed">{service.desc}</p>
           </div>
         ))}
       </div>

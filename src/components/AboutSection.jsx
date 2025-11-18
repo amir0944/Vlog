@@ -7,6 +7,8 @@ const AboutSection = () => {
       className="px-2 lg:w-[80%] w-full mx-auto h-[800px] flex lg:flex-row flex-col justify-center items-center gap-8 text-white lg:mt-0 mt-40"
     >
       <div
+        data-aos="fade-in"
+        data-aos-delay="100"
         style={{ boxShadow: "-18px 18px 10px black" }}
         className="lg:w-max relative bg-[#ff0066] rounded-2xl p-5"
       >
@@ -17,7 +19,11 @@ const AboutSection = () => {
           <p>Experience</p>
         </div>
       </div>
-      <div className="lg:w-1/2 flex flex-col gap-8 lg:mt-0 mt-4">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="100"
+        className="lg:w-1/2 flex flex-col gap-8 lg:mt-0 mt-4"
+      >
         <hr className="hr" />
         <h1 className="text-5xl font-bold">Introduction About Me</h1>
         <p className="leading-8 mx-4 md:mx-0">

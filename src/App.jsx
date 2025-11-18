@@ -18,6 +18,7 @@ const App = () => {
       <ServicesSection />
       <StatsSection />
       <Footer />
+      
     </div>
   );
 };
