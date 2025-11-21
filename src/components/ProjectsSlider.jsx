@@ -63,7 +63,7 @@ const ProjectsSlider = () => {
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
-              <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 xl:gap-16 max-w-7xl mx-auto items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 max-w-7xl mx-auto items-start">
                 <div className="relative order-1 lg:order-1 col-span-1 lg:col-span-3">
                   <div className="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-pink-500/30 hover:border-pink-500/60 transition-all duration-700">
                     <img
