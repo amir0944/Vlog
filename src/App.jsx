@@ -7,6 +7,7 @@ import StatsSection from "./components/StatsSection";
 import ScrollButton from "./components/ScrollButton";
 import "./index.css";
 import Footer from "./components/Footer";
+import ProjectsSlider from "./components/ProjectsSlider";
 
 const App = () => {
   return (
@@ -16,9 +17,9 @@ const App = () => {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <ProjectsSlider />
       <StatsSection />
       <Footer />
-      
     </div>
   );
 };

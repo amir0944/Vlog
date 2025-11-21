@@ -156,3 +156,7 @@ section p {
   margin-top: 1rem;
   line-height: 1.5;
 }
+.swiper-pagination-bullet {
+  background-color: white !important;
+  /* color: white; */
+}

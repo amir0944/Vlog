@@ -12,7 +12,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-t from-gray-900 to-gray-800 text-white py-12 px-4 mt-20">
+    <footer
+      id="Footer"
+      className="bg-gradient-to-t from-gray-900 to-gray-800 text-white py-12 px-4 mt-20"
+    >
       <div className="container mx-auto">
         <hr className="border-t border-pink-500 mb-10 opacity-50" />
 
@@ -22,7 +25,7 @@ const Footer = () => {
               <div className="flex justify-center mb-4">
                 <FiMapPin className="w-10 h-10 text-amber-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">آدرس</h3>
+              <h3 className="text-xl font-bold mb-3">Address</h3>
               <p className="text-sm">
                 اصفهان، کاشان
                 <br />
@@ -36,7 +39,7 @@ const Footer = () => {
               <div className="flex justify-center mb-4">
                 <FiMail className="w-10 h-10 text-amber-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">ایمیل</h3>
+              <h3 className="text-xl font-bold mb-3">Email</h3>
               <a
                 href="mailto:amirseyyedi944@gmail.com"
                 className="text-sm hover:text-amber-300"
@@ -51,7 +54,7 @@ const Footer = () => {
               <div className="flex justify-center mb-4">
                 <FiMessageCircle className="w-10 h-10 text-amber-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">تلگرام</h3>
+              <h3 className="text-xl font-bold mb-3">Telegram</h3>
               <a
                 href="https://t.me/amirseyyedi0944"
                 target="_blank"
