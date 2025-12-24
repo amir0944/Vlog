@@ -12,7 +12,7 @@ const AboutSection = () => {
         style={{ boxShadow: "-18px 18px 10px black" }}
         className="lg:w-max relative bg-[#ff0066] rounded-2xl p-5"
       >
-        <img src="/images/me.png" alt="Me" />
+        <img src="/images/me2.png" alt="Me" />
         <div className="w-[150px] h-[150px] bg-[#ff0066] rounded-r-2xl absolute top-1/4 flex flex-col gap-2 justify-center items-center font-bold text-2xl">
           <p>3</p>
           <p>Years</p>
