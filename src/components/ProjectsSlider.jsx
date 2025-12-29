@@ -39,13 +39,10 @@ const ProjectsSlider = () => {
   ];
 
   return (
-    <section
-      id="portfolioSection"
-      className="relative p-1 border-2 m-0.5 rounded-3xl"
-    >
+    <section id="portfolioSection" className="relative p-1 m-0.5 rounded-3xl">
       <div className="container mx-auto ">
-        <h2 className="text-5xl md:text-6xl font-bold text-center mb-20 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-          Featured Projects
+        <h2 className="text-5xl md:text-6xl font-bold text-center mb-5 mt bg-gradient-to-r from-pink-400 via-purple-600 to-cyan-400 bg-clip-text text-transparent">
+          Best Projects
         </h2>
 
         <Swiper

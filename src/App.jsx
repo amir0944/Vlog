@@ -18,7 +18,6 @@ const App = () => {
       <AboutSection />
       <ServicesSection />
       <ProjectsSlider />
-      <StatsSection />
       <Footer />
     </div>
   );
