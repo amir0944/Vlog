@@ -1,4 +1,28 @@
 @import "tailwindcss";
+html.light {
+  --footer-bg: linear-gradient(
+    to bottom right,
+    rgb(249, 220, 255),
+    #b752ff,
+    #8807e3
+  );
+}
+
+html.dark {
+  --footer-bg: linear-gradient(to bottom right, #18181b, #27272a, #000000);
+}
+
+html.light {
+  background-color: whitesmoke;
+}
+html.light .theme1 {
+  color: black !important;
+}
+
+html.dark {
+  background-color: #0f0f0f;
+  color: whitesmoke;
+}
 
 .btn {
   @apply bg-[#ff0066] text-white py-3 px-6 rounded-lg hover:bg-white hover:text-[#ff0066] transition duration-300 cursor-pointer;
@@ -159,4 +183,15 @@ section p {
 .swiper-pagination-bullet {
   background-color: white !important;
   /* color: white; */
+}
+#footer {
+  @apply mt-20 py-12 px-4 relative overflow-hidden
+    bg-gradient-to-br
+    from-pink-100 via-pink-200 to-pink-300
+    text-gray-900
+  
+    dark:from-zinc-900
+    dark:via-zinc-800
+    dark:to-zinc-950
+   dark:text-white;
 }

@@ -11,7 +11,7 @@ import ProjectsSlider from "./components/ProjectsSlider";
 
 const App = () => {
   return (
-    <div className="bg-[#353434]">
+    <>
       <ScrollButton />
       <Header />
       <HeroSection />
@@ -19,7 +19,7 @@ const App = () => {
       <ServicesSection />
       <ProjectsSlider />
       <Footer />
-    </div>
+    </>
   );
 };
 

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useTheme } from "@/context/ThemeContext";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <>
@@ -31,11 +33,20 @@ const Header = () => {
         </button>
 
         {/* Profile Image */}
-        <img
-          src="/images/images.jpg"
-          alt=""
-          className="w-14 rounded-full border-2 border-[#ffffff]"
-        />
+        <div className="flex flex-row gap-3 justify-center items-center">
+          <img
+            src="/images/images.jpg"
+            alt=""
+            className="w-14 rounded-full border-2 border-[#ffffff]"
+          />
+          <button
+            onClick={toggleTheme}
+            className="ml-4 text-xl hover:scale-110 transition"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? "☀️" : "🌙"}
+          </button>
+        </div>
 
         {/* منوی افقی دسکتاپ — فقط تو دسکتاپ نمایش داده می‌شه */}
         <nav className="hidden md:flex items-center gap-8">

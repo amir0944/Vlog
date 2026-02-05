@@ -22,7 +22,7 @@ const AboutSection = () => {
       <div
         data-aos="fade-up"
         data-aos-delay="100"
-        className="lg:w-1/2 flex flex-col gap-8 lg:mt-0 mt-4"
+        className="lg:w-1/2 flex flex-col gap-8 lg:mt-0 mt-4 theme1"
       >
         <hr className="hr" />
         <h1 className="text-5xl font-bold">Introduction About Me</h1>

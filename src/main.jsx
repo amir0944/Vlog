@@ -7,6 +7,7 @@ import "./index.css";
 // اضافه کن این دو خط
 import AOS from "aos";
 import "aos/dist/aos.css"; // استایل‌های AOS
+import { ThemeProvider } from "./context/ThemeContext.jsx";
 
 // این رو بعد از رندر اضافه کن
 AOS.init({
@@ -18,6 +19,8 @@ AOS.init({
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
